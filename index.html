@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>JUEGO</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>    
+<body>
+    <div class="contenedor">
+        <h1>Juego de velocidad de escritura</h1> 
+        <!-- Pantalla de Inicio -->
+        <div id="inicio">
+            <img src="mirrorball2.svg" alt="">
+            <p>¿Cuántas canciones puedes escribir en 1 minuto?</p>
+            <button class="button" onclick="comenzarJuego()">COMENZAR JUEGO</button>
+        </div> 
+
+        <!-- Pantalla de juego -->
+        <div class="juego" id="juego">
+             <div id="tiempo" class="tiempo">60</div>
+            <div id="palabra" class="palabra_estilo">PALABRA</div>
+            
+            <input type="text" placeholder="Escribe aquí..." id="palabra_ingresada" class="entrada" onkeyup="comparar()">
+            <div class="listado" id="registro">
+                <h3>Palabras escritas:</h3>
+
+            </div>
+        </div>
+        <!-- Pantalla final -->
+        <div class="estilo_final" id="final">
+            <p class="texto_final">Palabras que escribiste en un minuto:</p>
+            <div class="estilo_cantidad_final" id="cantidad_final">30
+            </div>
+            <a href="index.html" class="button">JUGAR DE NUEVO</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
